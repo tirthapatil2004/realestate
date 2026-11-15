@@ -1,0 +1,131 @@
+<html>
+ <head>
+  <title>
+   Payment Methods
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+        .payment-container {
+            width: 350px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .payment-header {
+            background-color: #2196F3;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-size: 18px;
+        }
+        .payment-methods {
+            display: flex;
+            justify-content: space-around;
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+        .payment-methods img {
+            width: 50px;
+            height: auto;
+        }
+        .payment-form {
+            padding: 20px;
+        }
+        .payment-form label {
+            display: block;
+            margin-bottom: 5px;
+            color: #888;
+            font-size: 12px;
+        }
+        .payment-form input {
+            width: calc(100% - 30px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .payment-form .input-group {
+            display: flex;
+            align-items: center;
+        }
+        .payment-form .input-group input {
+            flex: 1;
+        }
+        .payment-form .input-group .icon {
+            margin-left: 10px;
+            color: #4CAF50;
+        }
+        .confirm-button {
+            width: 100%;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 0 0 10px 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="payment-container">
+   <div class="payment-header">
+    Payment Methods
+   </div>
+   <div class="payment-methods">
+    <img alt="Visa logo" height="30" src="https://storage.googleapis.com/a1aa/image/0HEgfmCQrmVvXKdS2FXj8jny4eqpuQWdbIf3eAH0RjHvqeBdC.jpg" width="50"/>
+    <img alt="MasterCard logo" height="30" src="money.png" width="50"/>
+    <img alt="Discover logo" height="30" src="https://storage.googleapis.com/a1aa/image/WD3ciYWUJ2Y2M1FKSHIhtheTKRP6wnD3M0BsAfqgxj3pqPoTA.jpg" width="50"/>
+    <img alt="PayPal logo" height="30" src="https://storage.googleapis.com/a1aa/image/aSaUgCH7fCUKYSUfmPmQw4fttnryZGyNqwQPcKfNHmq2qeBdC.jpg" width="50"/>
+   </div>
+   <div class="payment-form">
+    <label for="card-number">
+     CARD NUMBER
+    </label>
+    <div class="input-group">
+     <input id="card-number" type="text" value="" placeholder="1111-2222-3333-4444"/>
+     
+    </div>
+    <label for="expiration-date">
+     EXPIRATION DATE
+    </label>
+    <div class="input-group">
+     <input id="expiration-date" type="text" value="" placeholder="mm/yyyy"/>
+    </div>
+    <label for="cvv">
+     CVV
+    </label>
+    <div class="input-group">
+     <input id="cvv" type="password" maxlength="3" pattern="\d{3}" value="" placeholder="123" required/>
+     <!-- <i class="fas fa-info-circle icon" style="color: #2196F3;"> -->
+     </i>
+    </div>
+    <label for="card-holder">
+     CARD HOLDER'S NAME
+    </label>
+    <div class="input-group">
+     <input id="card-holder" type="text" value="" placeholder="eg. John Doe"/>
+    </div>
+   </div>
+   <form action="success.html" method="get">
+    <button class="confirm-button">
+        CONFIRM PAYMENT
+    </button>
+ </form>
+  </div>
+  <div class="image-container">
+    <img src="qrcode.png" alt="Payment Success" width="500" height="500">
+  </div>
+ </body>
+</html>

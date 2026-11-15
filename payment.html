@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="tailwindcss-colors.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Payment Page</title>
+</head>
+<body>
+    
+    <!-- start: Payment -->
+    <section class="payment-section">
+        <div class="container">
+            <div class="payment-wrapper">
+                <div class="payment-right">
+                    <form action="" class="payment-form inline-block">
+                        <h1 class="payment-title">Payment Details</h1>
+                        <div class="payment-method">
+                            <input type="radio" name="payment-method" id="method-1" checked>
+                            <label for="method-1" class="payment-method-item">
+                                <img src="img/visa.png" alt="">
+                            </label>
+                            <input type="radio" name="payment-method" id="method-2">
+                            <label for="method-2" class="payment-method-item">
+                                <img src="img/mastercard.png" alt="">
+                            </label>
+                            <input type="radio" name="payment-method" id="method-3">
+                            <label for="method-3" class="payment-method-item">
+                                <img src="img/paypal.png" alt="">
+                            </label>
+                            <input type="radio" name="payment-method" id="method-4">
+                            <label for="method-4" class="payment-method-item">
+                                <img src="img/stripe.png" alt="">
+                            </label>
+                        </div>
+                        <div class="payment-form-group">
+                            <input type="email" placeholder=" " class="payment-form-control" id="email">
+                            <label for="email" class="payment-form-label payment-form-label-required">Card Holder Name</label>
+                        </div>
+                        <div class="">
+                            <input type="text" type="textfield" placeholder=" " class="" id="card-number">
+                            <label for="card-number" class="">Card Number</label>
+                        </div>
+                        <div class="payment-form-group-flex">
+                            <div class="payment-form-group">
+                              
+                                <input type="month" placeholder="mm-yyyy" class="payment-form-control" id="monthYear" min="2022-06"
+                                max="2029-09" required>
+                                <label for="expiry-date" class="payment-form-label payment-form-label-required">Expiry Date</label>
+                            </div>
+                            <div class="payment-form-group">
+                                <input type="password" placeholder=" " minlength="3" class="payment-form-control" id="cvv" required>
+                                <label for="cvv" class="payment-form-label payment-form-label-required">CVV</label>
+                            </div>
+                        </div>
+                        <button type="submit" value="submit" class="btn btn-danger payment-form-submit-button" onclick="window.location.href = 'success.html';">Pay</button>
+                       
+                    </form>
+                   
+                </div>
+                <div class="payment-left">
+                    <img src="qrcode.png" alt="Description of the image" width="500" height="300">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end: Payment -->
+
+</body>
+</html>
